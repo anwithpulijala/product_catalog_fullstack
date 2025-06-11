@@ -1,0 +1,162 @@
+/* === GENERAL PAGE STYLING === */
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* Gradient for a modern look */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ✅ Center the container properly */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Make sure content inside container is centered */
+.d-flex {
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Ensure the row is properly centered */
+.row {
+  justify-content: center;
+  gap: 20px; /* Space between elements */
+}
+
+/* ✅ Fix card grid alignment */
+.row .col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* === HEADER STYLING === */
+h1 {
+  text-align: center;
+  font-size: 42px;  /* Bigger Font Size */
+  font-weight: 700; /* Make it bold */
+  color: #2c3e50;   /* Darker color */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Capitalize Text */
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* === FILTER & SEARCH BAR === */
+.row.align-items-center {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7); /* Soft background */
+}
+
+/* ✅ Style for search and category filter */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ✅ Make dropdown look better */
+select.form-control {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+/* === PRODUCT CARDS === */
+.card {
+  width: 400px;  /* Set a fixed width */
+  height: 600px; /* Set a fixed height */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 100%;  /* Make the image fill the width */
+  height: 300px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensures images fit without distortion */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  color: #555;
+  font-size: 14px;
+}
+
+.card-text strong {
+  font-size: 16px;
+  color: #27ae60;
+}
+
+
+/* ✅ Button Styling */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* === RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-md-3, .col-md-4 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
